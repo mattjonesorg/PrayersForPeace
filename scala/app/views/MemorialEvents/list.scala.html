@@ -1,0 +1,11 @@
+@(memorialEvents: List[MemorialEvent])(implicit lang: Lang) 
+
+@main(Messages("application.name")) {
+
+  <dl class="memorialEvents">    
+    @for(mem_event <- memorialEvents) {
+        <dt>@mem_event.name</dt>      
+        <dd>@mem_event.date</dd>    
+    }  
+    </dl> 
+}
